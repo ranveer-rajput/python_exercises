@@ -31,4 +31,15 @@ python -m unittest tests.test_ex_03
 
 def calculate_factorial(n):
     # TODO: Implement the function to calculate factorial of n
-    pass
+    if not isinstance(n, int):
+        raise ValueError("Input must be an integer.")
+    if isinstance(n, bool):
+        raise ValueError("Boolean values are not allowed.")
+    if n<0:
+        raise ValueError( "Factorial is undefined for negative numbers.")
+
+
+    fact=1
+    for i in range(1,n+1):
+        fact=fact*i
+    return fact
