@@ -36,6 +36,17 @@ python -m unittest tests.test_ex_05
 - Make sure your checking for invalid inputs correctly and raising errors if required.
 """
 
-
+import math
 def calculate_eoq(D):
-    pass
+   if not isinstance(D, int):
+        raise ValueError("Input must be an integer.")
+   if isinstance(D, bool):
+        raise ValueError("Boolean values are not allowed.")
+   if D < 0:
+        raise ValueError("input must be positive")
+
+   c=50
+   h=30
+   q=math.sqrt((2*c*D)/h)
+   return round(q)
+    

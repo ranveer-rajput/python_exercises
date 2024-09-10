@@ -37,4 +37,17 @@ python -m unittest tests.test_ex_06
 
 
 def gen_2d_array(x, y):
-    pass
+    if not isinstance(x,int)or not isinstance(y,int):       
+        raise ValueError("inters allowed")
+    if x < 0 or y < 0:
+        raise ValueError("Both x and y must be non-negative")
+    second = []  
+    for i in range(x):
+        new = []  
+        for j in range(y):
+            new.append(i * j) 
+        second.append(new)  
+    return second 
+
+
+
