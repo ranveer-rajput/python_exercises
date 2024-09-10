@@ -37,17 +37,16 @@ python -m unittest tests.test_ex_04
 
 def get_squares(n):
 
-    my_dic={}
+    my_dic = {}
 
-    if not isinstance(n,int):
-        raise ValueError('only int value allowed')
-    if n<=0:
-        raise ValueError('only positive numbers allowed')
-    for i in range(1,n+1):
-        key=i
-        value=i*i
-        my_dic[key]=value
+    if not isinstance(n, int):
+        raise ValueError("only int value allowed")
+
+    if n <= 0:
+        raise ValueError("only positive numbers allowed")
+
+    for i in range(1, n + 1):
+
+        my_dic[i] = i * i
+        
     return my_dic
-    
-    
-    

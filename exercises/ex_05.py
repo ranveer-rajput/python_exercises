@@ -49,4 +49,6 @@ def calculate_eoq(D):
    h=30
    q=math.sqrt((2*c*D)/h)
    return round(q)
-    
+
+
+
